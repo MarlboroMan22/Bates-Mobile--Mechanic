@@ -1,0 +1,16 @@
+mechanic-shop-manager/
+├── public/
+│   └── manifest.json           # For PWA config
+├── src/
+│   ├── components/             # Reusable UI components
+│   ├── pages/                  # Main views (Jobs, Inventory, Invoices, etc.)
+│   ├── data/                   # Local IndexedDB helpers
+│   ├── utils/                  # Mileage calc, time tracking, etc.
+│   ├── App.jsx
+│   └── main.jsx
+├── .gitignore
+├── index.html
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+└── vite.config.js
