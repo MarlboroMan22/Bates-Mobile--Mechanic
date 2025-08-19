@@ -1,0 +1,98 @@
+// main.jsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './index.css';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+// App.jsx
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Jobs from './pages/Jobs';
+import Inventory from './pages/Inventory';
+import Invoices from './pages/Invoices';
+import Dashboard from './pages/Dashboard';
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/jobs" element={<Jobs />} />
+        <Route path="/inventory" element={<Inventory />} />
+        <Route path="/invoices" element={<Invoices />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
+
+// pages/Dashboard.jsx
+import React from 'react';
+
+function Dashboard() {
+  return <div className="p-4 text-xl font-bold">Welcome to Mechanic Shop Manager</div>;
+}
+
+export default Dashboard;
+
+// pages/Jobs.jsx
+import React from 'react';
+
+function Jobs() {
+  return <div className="p-4">Job Scheduling Coming Soon...</div>;
+}
+
+export default Jobs;
+
+// pages/Inventory.jsx
+import React from 'react';
+
+function Inventory() {
+  return <div className="p-4">Inventory Tracking Coming Soon...</div>;
+}
+
+export default Inventory;
+
+// pages/Invoices.jsx
+import React from 'react';
+
+function Invoices() {
+  return <div className="p-4">Invoice Management Coming Soon...</div>;
+}
+
+export default Invoices;
+
+// index.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50 text-gray-800;
+}
+
+// manifest.json (in public/)
+{
+  "short_name": "MechanicMgr",
+  "name": "Mechanic Shop Manager",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "Manage your mobile mechanic business with ease",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
